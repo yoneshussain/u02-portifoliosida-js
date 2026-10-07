@@ -444,10 +444,10 @@ body {
     }
 
     .workexp-icon {
-        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(115%) contrast(100%);
+        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(315%) contrast(100%);
     }
 
     .edu-icon {
-        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(115%) contrast(100%);
+        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(315%) contrast(100%);
     }
 }
