@@ -273,3 +273,22 @@ body {
         line-height: 5rem;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #191919;
+    }
+
+    :root {
+        --black: #D9D9D9;
+        --gray: #A7A7A7;
+    }
+
+    .main-text {
+        text-shadow: none;
+    }
+
+    .portrait {
+        box-shadow: none;
+    }
+}
