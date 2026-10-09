@@ -27,7 +27,7 @@ Jag använde media queries för att göra sidan responsiv och bestämde brytpunk
 
 Jag har försökt maximera tillgängligheten så gott som det går på sidan. Alla bilder som jag lagt in i sidan har en alt text för att man ska kunna läsa upp bilderna med hjälpmedel. Jag har även sett till att alla tryckbara saker på sidan går att navigera med endast tangentbord, och det har jag gjort genom att se till att alla tryckbara saker är anchors eller buttons. Jag testade tillgängligheten genom att endast använda tangentbordet för att navigera och det funkade bra. Färgerna på allt i sidan klarar även av WCAG AA och det testade jag genom en chrome extension för tillgänglighet som säger till om något är fel, och även med lighthouse. 
 
--**Styrkor och brister. Vad blev bra, och vad skulle du bygga om med mer tid?**
+**Styrkor och brister. Vad blev bra, och vad skulle du bygga om med mer tid?**
 
 Jag tycker att sidan i helhet blev väldigt bra. För att börja försiktigt valde jag att inte fylla i all information förutom mitt namn och länkar till sociala medier. Jag har även inte lagt in någon javascript eller kodat in hamburgar-knappen eller någon meny som är rörande. Jag har valt att ha loggan som hemknapp om man är inne i en annan sida för tillfället, och navbaren stationär för att man ska kunna se så mycket av sidan som möjligt medan man är inne och scrollar. Om jag hade mer tid skulle jag definitivt bredda ut med javascript och fina animationer för sidan. Jag skulle även ha fyllt på all information som till exempel arbetslivserfarenhet, osv.
 
