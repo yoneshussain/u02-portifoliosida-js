@@ -1,7 +1,7 @@
 # Examinationsmoment — U01 Poritoliosida utifrån designskiss
 https://yoneshussain.github.io/u01-portifoliosida/index.html
 ## Reflektion
-**Från skiss till kod. Hur gick du tillväga? Var det något i skissen som var svårt att översätta till HTML och CSS, och hur löste du det?**
+* **Från skiss till kod. Hur gick du tillväga? Var det något i skissen som var svårt att översätta till HTML och CSS, och hur löste du det?**
 
 Jag började med att överblicka skissen och kolla efter detaljer som textstorlekar, distansen mellan olika element, fonter, utseenden, osv. Det var väldigt tydligt och enkelt att hitta dessa egenskaper i Figma. Dock önskar jag att mobil layouten också hade levande element så att man kunde skilja mellan olika storlekar och distansen mellan alla element. 
 
