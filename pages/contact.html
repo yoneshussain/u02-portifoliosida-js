@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="navbar">
-      <nav class="menu-top">
+      <nav class="menu-top menu-hidden">
         <ul class="logo">
           <li>
             <a class="logo-top" href="./../index.html">{007}</a>
@@ -20,15 +20,12 @@
           </li>
         </ul>
 
-        <input
-          type="image"
-          src="./../assets/hamburger.svg"
-          class="hamburger"
-          alt="menu-icon"
-        />
+        <button class="hamburger" id="menu-button">
+          <img src="../assets/hamburger.svg" alt="menu-icon">
+        </button>
       </nav>
 
-      <nav class="menu-mid">
+      <nav class="menu-mid menu-hidden">
         <a href="./../index.html" class="links">Home </a>
         <a href="./../pages/about.html" class="links">About</a>
 
@@ -92,3 +89,6 @@
     </footer>
   </body>
 </html>
+
+
+<script src="../js/menu.js"></script>

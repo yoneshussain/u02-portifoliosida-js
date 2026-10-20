@@ -68,7 +68,7 @@ body {
     width: 100%;
     align-items: center;
 
-    & .logo a {
+    .logo a {
         font-size: 1.8rem;
         font-family: FiraCode;
         font-weight: 700;
@@ -79,7 +79,7 @@ body {
 
     /* hamburger */
 
-    & .hamburger {
+    .hamburger {
         height: 2.2rem;
         margin-left: auto;
         margin-right: 13px;
@@ -98,14 +98,14 @@ body {
     justify-content: flex-start;
     margin: 40px 20px;
 
-    & .title {
+    .title {
         font-size: 2.3rem;
         padding-bottom: 10px;
         font-family: Poppins;
         color: var(--black);
     }
 
-    & .subtitle {
+    .subtitle {
         font-size: 1.3rem;
         margin-bottom: 25px;
         font-family: DMSans;
@@ -113,7 +113,7 @@ body {
         color: var(--gray);
     }
 
-    & .tech-logos {
+    .tech-logos {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -121,14 +121,14 @@ body {
         width: 100%;
     }
 
-    & .logo {
+    .logo {
         width: 16%;
         max-width: 80px;
         height: auto;
         min-height: 65px;
     }
 
-    & .tools-title {
+    .tools-title {
         font-size: 2.4rem;
         padding-bottom: 20px;
         font-family: DMSans;
@@ -151,11 +151,11 @@ body {
     color: var(--gray);
     opacity: 0.8;
 
-    & .footer-name {
+    .footer-name {
         font-weight: 900;
     }
 
-    & .footer-grad {
+    .footer-grad {
         background-image: linear-gradient(180deg, var(--pink), var(--blue));
         background-clip: text;
         color: transparent;
@@ -209,7 +209,7 @@ body {
         gap: 50px;
         padding-right: 130px;
 
-        & .links {
+        .links {
             font-size: 1.7rem;
             font-weight: 500;
         }
