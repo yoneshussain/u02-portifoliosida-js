@@ -1,9 +1,4 @@
-:root {
-    --black: #42446E;
-    --blue: #00C0FD;
-    --pink: #E70FAA;
-    --gray: #525252;
-}
+
 
 @font-face {
     font-family: FiraCode;
@@ -56,47 +51,6 @@ body {
     gap: 0px
 }
 
-/* navigation bar */
-
-.navbar {
-    grid-area: navbar;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-/* logo */
-
-.menu-top {
-    display: flex;
-    width: 100%;
-    align-items: center;
-
-    & .logo {
-        opacity: 0.9;
-        padding: 20px 0px 0px 20px;
-    }
-
-    & .logo a {
-        font-size: 1.8rem;
-        font-family: FiraCode;
-        font-weight: 700;
-        background-image: linear-gradient(280deg, var(--pink), var(--blue));
-        background-clip: text;
-        color: transparent;
-    }
-
-    /* hamburger */
-
-    & .hamburger {
-        height: 22px;
-        margin-left: auto;
-        margin-right: 13px;
-        margin-top: 20px;
-    }
-
-}
 
 /* PAGE CONTENT */
 /* ABOUT ME */
@@ -107,6 +61,7 @@ body {
     flex-direction: column;
     margin: 0px 20px;
     justify-content: center;
+    padding-top: 50px;
     height: 100%;
     gap: 11px;
 
@@ -328,18 +283,13 @@ body {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
 
-    .menu-mid {
-        display: none;
-    }
-
-    .menu-btm {
-        display: none;
-    }
 
 
 }
+
+
 
 @media (min-width: 1000px) {
 
@@ -371,10 +321,7 @@ body {
         gap: 50px;
         padding-right: 130px;
 
-        & .links {
-            font-size: 1.7rem;
-            font-weight: 500;
-        }
+
     }
 
     .menu-btm {
@@ -438,10 +385,6 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --black: #D9D9D9;
-        --gray: #d3d3d3;
-    }
 
     .workexp-icon {
         filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(315%) contrast(100%);

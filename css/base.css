@@ -3,7 +3,7 @@
     --blue: #00C0FD;
     --pink: #E70FAA;
     --gray: #525252;
-    --menu-bg: #fffffff6;
+    --menu-bg: #ffffff;
     --menu-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -59,7 +59,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 100;
 
 }
@@ -90,14 +91,26 @@ body {
     /* hamburger */
 
     .hamburger {
-        margin: 15px;
         border: none;
         background-color: transparent;
+        padding: 15px 20px;
+        margin-top: 20px;
+
     }
+
+
 
     .hamburger img {
         height: 25px;
         width: 25px;
+        transition:
+            box-shadow 200ms ease-out;
+
+    }
+
+    .hamburger:hover img {
+        box-shadow: 0 2px 25px rgba(179, 179, 179, 0.267);
+        border-radius: 5px;
     }
 
 }
@@ -112,6 +125,7 @@ body {
     top: 100%;
     left: 5%;
     right: 5%;
+    border: 1px solid rgb(218, 216, 216);
 
 
     .menu-mid {
@@ -126,6 +140,13 @@ body {
             font-family: DMSans;
             color: var(--gray);
             font-weight: 600;
+            padding: 10px;
+        }
+
+        .links:hover {
+            border: 1.5px solid gray;
+            border-radius: 14px;
+            
         }
     }
 
@@ -261,6 +282,8 @@ body {
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
         padding-bottom: 20px;
+        background-color: var(--menu-bg);
+
 
         width: 90%;
     }
@@ -314,6 +337,7 @@ body {
         position: static;
         background-color: transparent;
         box-shadow: none;
+        border: none;
     }
 
     .menu-panel .menu-mid {
@@ -359,8 +383,8 @@ body {
 @media (prefers-color-scheme: dark) {
 
     :root {
-        --menu-bg: #323233;
-        --menu-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        --menu-bg: #191919;
+        --menu-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
 
     body {

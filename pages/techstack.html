@@ -10,128 +10,250 @@
   </head>
   <body>
     <header class="navbar">
-      <nav class="menu-top">
+      <div class="menu-top">
         <ul class="logo">
           <li>
-            <a class="logo-top" href="./../index.html">{007}</a>
+            <a class="logo-top" href="../index.html">{007}</a>
           </li>
           <li>
-            <a class="logo-btm" href="./../index.html">yones</a>
+            <a class="logo-btm" href="../index.html">yones</a>
           </li>
         </ul>
 
-        <button class="hamburger" id="menu-button">
-          <img src="../assets/hamburger.svg" alt="menu-icon">
+        <button
+          class="hamburger"
+          id="menu-button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation"
+        >
+          <img src="../assets/hamburger.svg" alt="menu-icon" />
         </button>
-      </nav>
+      </div>
 
-      <nav class="menu-mid menu-hidden">
-        <a href="./../index.html" class="links">Home </a>
-        <a href="./../pages/about.html" class="links">About</a>
+      <div class="menu-panel menu-hidden">
+        <nav class="menu-mid">
+          <a href="../index.html" class="links">Home </a>
+          <a href="../pages/about.html" class="links">About</a>
 
-        <a href="./../pages/techstack.html" class="links">Tech Stack</a>
+          <a href="../pages/techstack.html" class="links">Tech Stack</a>
 
-        <a href="./../pages/projects.html" class="links">Projects</a>
+          <a href="../pages/projects.html" class="links">Projects</a>
 
-        <a href="./../pages/contact.html" class="links">Contact</a>
-      </nav>
+          <a href="../pages/contact.html" class="links">Contact</a>
+        </nav>
 
-      <nav class="menu-btm menu-hidden">
-        <a
-          href="https://github.com/yoneshussain"
-          target="_blank"
-          class="socialicons"
-          ><img
-            src="./../assets/githubicon.png"
-            style="height: 23px"
-            alt="GitHub Profile"
-            class="socials"
-        /></a>
+        <div class="menu-btm">
+          <a
+            href="https://github.com/yoneshussain"
+            target="_blank"
+            class="socialicons"
+            ><img
+              src="../assets/githubicon.png"
+              style="height: 23px"
+              alt="GitHub Profile"
+              class="socials"
+          /></a>
 
-        <a href="https://x.com/login" target="_blank" class="socialicons"
-          ><img
-            src="./../assets/twittericon.png"
-            style="height: 23px"
-            alt="Twitter Profile"
-            class="socials"
-        /></a>
+          <a href="https://x.com/login" target="_blank" class="socialicons"
+            ><img
+              src="../assets/twittericon.png"
+              style="height: 23px"
+              alt="Twitter Profile"
+              class="socials"
+          /></a>
 
-        <a
-          href="https://linkedin.com/in/yones-hussain-b9a265192"
-          target="_blank"
-          class="socialicons"
-          ><img
-            src="./../assets/linkedinicon.png"
-            style="height: 23px"
-            alt="LinkedIn Profile"
-            class="socials"
-        /></a>
-      </nav>
+          <a
+            href="https://linkedin.com/in/yones-hussain-b9a265192"
+            target="_blank"
+            class="socialicons"
+            ><img
+              src="../assets/linkedinicon.png"
+              style="height: 23px"
+              alt="LinkedIn Profile"
+              class="socials"
+          /></a>
+        </div>
+      </div>
     </header>
 
     <section class="techstack">
       <h1 class="title">My Tech Stack</h1>
-      <h2 class="subtitle">Technologies I have been working with recently:</h2>
+      <h2 class="subtitle">
+        Technologies I have been working with recently (hover over to see name):
+      </h2>
       <div class="tech-logos">
         <div class="tech-langs">
-          <img class="logo" src="./../assets/icons/html.svg" alt="html logo" />
-          <img class="logo" src="./../assets/icons/css.svg" alt="html logo" />
-          <img
-            class="logo"
-            src="./../assets/icons/js.svg"
-            alt="javascript logo"
-          />
-          <img
-            class="logo"
-            src="./../assets/icons/react.svg"
-            alt="react logo"
-          />
-          <img
-            class="logo"
-            src="./../assets/icons/redux.svg"
-            alt="redux logo"
-          />
-          <img
-            class="logo"
-            src="./../assets/icons/bootstrap.svg"
-            alt="bootstrap logo"
-          />
-          <img
-            class="logo"
-            src="./../assets/icons/tailwind.svg"
-            alt="tailwind logo"
-          />
-          <img class="logo" src="./../assets/icons/sass.svg" alt="sass logo" />
-          <img
-            class="logo"
-            src="./../assets/icons/greensock.svg"
-            alt="sass logo"
-          />
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">HTML</span>
+              <img
+                class="html img-tag-logo"
+                src="./../assets/icons/html.svg"
+                alt="html logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">CSS</span>
+              <img
+                class="css img-tag-logo"
+                src="./../assets/icons/css.svg"
+                alt="css logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">JavaScript</span>
+              <img
+                class="javascript img-tag-logo"
+                src="./../assets/icons/js.svg"
+                alt="javascript logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">React</span>
+              <img
+                class="react img-tag-logo"
+                src="./../assets/icons/react.svg"
+                alt="react logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">Redux</span>
+              <img
+                class="redux img-tag-logo"
+                src="./../assets/icons/redux.svg"
+                alt="redux logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">Bootstrap</span>
+              <img
+                class="bootstrap img-tag-logo"
+                src="./../assets/icons/bootstrap.svg"
+                alt="bootstrap logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">Tailwind</span>
+              <img
+                class="tailwind img-tag-logo"
+                src="./../assets/icons/tailwind.svg"
+                alt="tailwind logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">Sass</span>
+              <img
+                class="sass img-tag-logo"
+                src="./../assets/icons/sass.svg"
+                alt="sass logo"
+              />
+            </div>
+          </div>
+
+          <div class="tag-logo">
+            <div class="tag">
+              <span class="img-tag tag-hidden">Greensock</span>
+
+              <img
+                class="greensock img-tag-logo"
+                src="./../assets/icons/greensock.svg"
+                alt="greensock logo"
+              />
+            </div>
+          </div>
         </div>
         <div class="tech-tools">
           <h3 class="tools-title">Tools:</h3>
-          <img class="logo" src="./../assets/icons/git.svg" alt="git logo" />
-          <img
-            class="logo"
-            src="./../assets/icons/vscode.svg"
-            alt="vscode logo"
-          />
-          <img
-            class="logo"
-            src="./../assets/icons/github.svg"
-            alt="github logo"
-          />
-          <img
-            class="logo"
-            src="./../assets/icons/figma.svg"
-            alt="figma logo"
-          />
-          <img class="logo" src="./../assets/icons/npm.svg" alt="npm logo" />
-          <img
-            class="logo"
-            src="./../assets/icons/postman.svg"
-            alt="postman logo"
-          />
+
+          <div class="tools-logos">
+            <div class="tag-logo">
+              <div class="tag">
+                <span class="img-tag tag-hidden">Git</span>
+                <img
+                  class="git img-tag-logo"
+                  src="./../assets/icons/git.svg"
+                  alt="git logo"
+                />
+              </div>
+            </div>
+
+            <div class="tag-logo">
+              <div class="tag">
+                <span class="img-tag tag-hidden">VSCode</span>
+                <img
+                  class="vscode img-tag-logo"
+                  src="./../assets/icons/vscode.svg"
+                  alt="vscode logo"
+                />
+              </div>
+            </div>
+
+            <div class="tag-logo">
+              <div class="tag">
+                <span class="img-tag tag-hidden">GitHub</span>
+                <img
+                  class="github img-tag-logo"
+                  src="./../assets/icons/github.svg"
+                  alt="github logo"
+                />
+              </div>
+            </div>
+
+            <div class="tag-logo">
+              <div class="tag">
+                <span class="img-tag tag-hidden">Figma</span>
+                <img
+                  class="figma img-tag-logo"
+                  src="./../assets/icons/figma.svg"
+                  alt="figma logo"
+                />
+              </div>
+            </div>
+
+            <div class="tag-logo">
+              <div class="tag">
+                <span class="img-tag tag-hidden">npm</span>
+                <img
+                  class="npm img-tag-logo"
+                  src="./../assets/icons/npm.svg"
+                  alt="npm logo"
+                />
+              </div>
+            </div>
+
+            <div class="tag-logo">
+              <div class="tag">
+                <span class="img-tag tag-hidden">Postman</span>
+                <img
+                  class="postman img-tag-logo"
+                  src="./../assets/icons/postman.svg"
+                  alt="postman logo"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

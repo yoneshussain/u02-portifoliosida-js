@@ -1,9 +1,4 @@
-:root {
-    --black: #42446E;
-    --blue: #00C0FD;
-    --pink: #E70FAA;
-    --gray: #525252;
-}
+
 
 @font-face {
     font-family: FiraCode;
@@ -54,42 +49,6 @@ body {
     gap: 0px
 }
 
-/* navigation bar */
-
-.navbar {
-    grid-area: navbar;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-/* logo */
-
-.menu-top {
-    display: flex;
-    width: 100%;
-    align-items: center;
-
-    .logo a {
-        font-size: 1.8rem;
-        font-family: FiraCode;
-        font-weight: 700;
-        background-image: linear-gradient(280deg, var(--pink), var(--blue));
-        background-clip: text;
-        color: transparent;
-    }
-
-    /* hamburger */
-
-    .hamburger {
-        height: 22px;
-        margin-left: auto;
-        margin-right: 13px;
-        margin-top: 20px;
-    }
-
-}
 
 /* PAGE CONTENT */
 /* CONTACT */
@@ -143,20 +102,6 @@ body {
 
 
 /* MEDIA QUERIES */
-
-
-@media (max-width: 1000px) {
-
-    .menu-mid {
-        display: none;
-    }
-
-    .menu-btm {
-        display: none;
-    }
-
-
-}
 
 @media (min-width: 1000px) {
 

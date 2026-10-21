@@ -10,65 +10,72 @@
   </head>
   <body>
     <header class="navbar">
-      <nav class="menu-top menu-hidden">
+      <div class="menu-top">
         <ul class="logo">
           <li>
-            <a class="logo-top" href="./../index.html">{007}</a>
+            <a class="logo-top" href="../index.html">{007}</a>
           </li>
           <li>
-            <a class="logo-btm" href="./../index.html">yones</a>
+            <a class="logo-btm" href="../index.html">yones</a>
           </li>
         </ul>
 
-        <button class="hamburger" id="menu-button">
-          <img src="../assets/hamburger.svg" alt="menu-icon">
+        <button
+          class="hamburger"
+          id="menu-button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation"
+        >
+          <img src="../assets/hamburger.svg" alt="menu-icon" />
         </button>
-      </nav>
+      </div>
 
-      <nav class="menu-mid menu-hidden">
-        <a href="./../index.html" class="links">Home </a>
-        <a href="./../pages/about.html" class="links">About</a>
+      <div class="menu-panel menu-hidden">
+        <nav class="menu-mid">
+          <a href="../index.html" class="links">Home </a>
+          <a href="../pages/about.html" class="links">About</a>
 
-        <a href="./../pages/techstack.html" class="links">Tech Stack</a>
+          <a href="../pages/techstack.html" class="links">Tech Stack</a>
 
-        <a href="./../pages/projects.html" class="links">Projects</a>
+          <a href="../pages/projects.html" class="links">Projects</a>
 
-        <a href="./../pages/contact.html" class="links">Contact</a>
-      </nav>
+          <a href="../pages/contact.html" class="links">Contact</a>
+        </nav>
 
-      <nav class="menu-btm">
-        <a
-          href="https://github.com/yoneshussain"
-          target="_blank"
-          class="socialicons"
-          ><img
-            src="./../assets/githubicon.png"
-            style="height: 23px"
-            alt="GitHub Profile"
-            class="socials"
-        /></a>
+        <div class="menu-btm">
+          <a
+            href="https://github.com/yoneshussain"
+            target="_blank"
+            class="socialicons"
+            ><img
+              src="../assets/githubicon.png"
+              style="height: 23px"
+              alt="GitHub Profile"
+              class="socials"
+          /></a>
 
-        <a href="https://x.com/login" target="_blank" class="socialicons"
-          ><img
-            src="./../assets/twittericon.png"
-            style="height: 23px"
-            alt="Twitter Profile"
-            class="socials"
-        /></a>
+          <a href="https://x.com/login" target="_blank" class="socialicons"
+            ><img
+              src="../assets/twittericon.png"
+              style="height: 23px"
+              alt="Twitter Profile"
+              class="socials"
+          /></a>
 
-        <a
-          href="https://linkedin.com/in/yones-hussain-b9a265192"
-          target="_blank"
-          class="socialicons"
-          ><img
-            src="./../assets/linkedinicon.png"
-            style="height: 23px"
-            alt="LinkedIn Profile"
-            class="socials"
-        /></a>
-      </nav>
+          <a
+            href="https://linkedin.com/in/yones-hussain-b9a265192"
+            target="_blank"
+            class="socialicons"
+            ><img
+              src="../assets/linkedinicon.png"
+              style="height: 23px"
+              alt="LinkedIn Profile"
+              class="socials"
+          /></a>
+        </div>
+      </div>
     </header>
-
     <section class="contact">
       <div class="contact-info">
         <h1 class="text">
@@ -89,6 +96,5 @@
     </footer>
   </body>
 </html>
-
 
 <script src="../js/menu.js"></script>

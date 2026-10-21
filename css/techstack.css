@@ -1,10 +1,3 @@
-:root {
-    --black: #42446E;
-    --blue: #00C0FD;
-    --pink: #E70FAA;
-    --gray: #525252;
-}
-
 @font-face {
     font-family: FiraCode;
     src: url(../assets/FiraCode-VariableFont_wght.ttf);
@@ -51,42 +44,6 @@ body {
     gap: 0px
 }
 
-/* navigation bar */
-
-.navbar {
-    grid-area: navbar;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-/* logo */
-
-.menu-top {
-    display: flex;
-    width: 100%;
-    align-items: center;
-
-    .logo a {
-        font-size: 1.8rem;
-        font-family: FiraCode;
-        font-weight: 700;
-        background-image: linear-gradient(280deg, var(--pink), var(--blue));
-        background-clip: text;
-        color: transparent;
-    }
-
-    /* hamburger */
-
-    .hamburger {
-        height: 2.2rem;
-        margin-left: auto;
-        margin-right: 13px;
-        margin-top: 20px;
-    }
-
-}
 
 /* PAGE CONTENT */
 /* TECH STACK */
@@ -95,14 +52,16 @@ body {
     grid-area: techstack;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin: 40px 20px;
+    justify-content: center;
+    height: 100%;
+    margin: 30px 34px;
 
     .title {
         font-size: 2.3rem;
         padding-bottom: 10px;
         font-family: Poppins;
         color: var(--black);
+        padding-left: 5px;
     }
 
     .subtitle {
@@ -111,22 +70,43 @@ body {
         font-family: DMSans;
         font-weight: 500;
         color: var(--gray);
+        padding-left: 5px;
     }
 
     .tech-logos {
         display: flex;
         flex-direction: column;
-        gap: 40px;
-        height: 100%;
+        gap: 50px;
         width: 100%;
     }
 
-    .logo {
-        width: 16%;
+    .tech-langs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tech-tools {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tools-logos {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+
+    }
+
+    .img-tag-logo {
+        display: flex;
+        flex-direction: row;
         max-width: 80px;
         height: auto;
         min-height: 65px;
+        padding: 10px;
     }
+
 
     .tools-title {
         font-size: 2.4rem;
@@ -134,7 +114,49 @@ body {
         font-family: DMSans;
         font-weight: 800;
         color: var(--black);
+        padding-left: 5px;
     }
+
+    .tag {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .img-tag {
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 4px 0px;
+        width: 90%;
+        font-size: 1.3rem;
+        border-radius: 14px;
+        font-family: DMSans;
+        font-weight: 600;
+        border: 1px solid rgba(80, 80, 80, 0.459);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.377);
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms ease, visibility 300ms, transform 300ms ease;
+
+
+    }
+
+    .tag:hover .img-tag {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .tag-hidden {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-15px);
+        visibility: hidden;
+    }
+
 }
 
 
@@ -147,6 +169,7 @@ body {
     margin-top: auto;
     font-size: 1.1rem;
     font-family: DMSans;
+    padding-top: 80px;
     padding-bottom: 23px;
     color: var(--gray);
     opacity: 0.8;
@@ -164,20 +187,6 @@ body {
 
 
 /* MEDIA QUERIES */
-
-
-@media (max-width: 1000px) {
-
-    .menu-mid {
-        display: none;
-    }
-
-    .menu-btm {
-        display: none;
-    }
-
-
-}
 
 @media (min-width: 1000px) {
 
@@ -235,13 +244,17 @@ body {
 
 
         .title {
-            margin-top: 30px;
+            margin-top: 150px;
             font-size: 3rem;
         }
 
         .logo {
             margin-right: 55px;
             height: 80px;
+        }
+
+        .tools-logos {
+            padding-bottom: 190px;
         }
     }
 
@@ -252,9 +265,23 @@ body {
 
 }
 
+@media (hover: none) {
+    .techstack .img-tag {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        width: 100%;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
-    :root {
-        --black: #D9D9D9;
-        --gray: #A7A7A7;
+
+    .techstack {
+        .img-tag {
+            background-color: #1f1f1f;
+            border: 1px solid rgba(77, 76, 76, 0.459);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            color: white;
+        }
     }
 }
