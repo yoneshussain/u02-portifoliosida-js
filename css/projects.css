@@ -52,7 +52,7 @@ body {
     grid-area: projects-section;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 50px 20px;
 
     .title {
         font-size: 2.4rem;
@@ -140,7 +140,6 @@ body {
 /* FOOTER */
 
 .footer {
-    grid-area: footer;
     display: flex;
     justify-content: center;
 
@@ -209,6 +208,7 @@ body {
     }
 
     .projects-section {
+        padding: 10px 20px;
         grid-column: 1 / -1;
         grid-row: 2 / 3;
 

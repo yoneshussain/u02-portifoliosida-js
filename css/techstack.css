@@ -163,7 +163,6 @@ body {
 /* FOOTER */
 
 .footer {
-    grid-area: footer;
     display: flex;
     justify-content: center;
     margin-top: auto;
@@ -271,6 +270,12 @@ body {
         opacity: 1;
         transform: translateY(0);
         width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .techstack .img-tag {
+        transition: none;
     }
 }
 
