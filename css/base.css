@@ -141,10 +141,13 @@ body {
             color: var(--gray);
             font-weight: 600;
             padding: 10px;
+            border: 0.5px solid rgba(128, 128, 128, 0);
+            border-radius: 14px;
+            transition: border, 300ms;
         }
 
         .links:hover {
-            border: 1.5px solid gray;
+            border: 0.5px solid gray;
             border-radius: 14px;
 
         }
@@ -346,6 +349,7 @@ body {
     .navbar {
         flex-direction: row;
         justify-content: space-between;
+        background-color: var(--menu-bg);
     }
 
     .menu-top {
@@ -370,8 +374,9 @@ body {
 
         flex-direction: row;
         margin-left: auto;
-        gap: 50px;
+        gap: 40px;
         padding-right: 130px;
+
 
         .links {
             font-size: 1.7rem;
@@ -399,6 +404,8 @@ body {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
 }
+
+
 
 @media (prefers-reduced-motion: reduce) {
     .menu-panel {

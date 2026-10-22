@@ -243,7 +243,6 @@ body {
 
 
         .title {
-            margin-top: 150px;
             font-size: 3rem;
         }
 
@@ -252,9 +251,6 @@ body {
             height: 80px;
         }
 
-        .tools-logos {
-            padding-bottom: 190px;
-        }
     }
 
 
