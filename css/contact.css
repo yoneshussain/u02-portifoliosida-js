@@ -159,10 +159,3 @@ body {
     }
 
 }
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --black: #D9D9D9;
-        --gray: #A7A7A7;
-    }
-}

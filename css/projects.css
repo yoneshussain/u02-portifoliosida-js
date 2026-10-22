@@ -83,7 +83,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        box-shadow: 0px 0px 30px #bebebe;
+        box-shadow: var(--menu-shadow);
         border-radius: 15px;
     }
 
@@ -250,18 +250,4 @@ body {
         grid-row: 3 / 4;
     }
 
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --black: #D9D9D9;
-        --gray: #b3b2b2;
-    }
-
-    .projects-section {
-        .project {
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-            background-color: #1f1f1f;
-        }
-    }
 }
