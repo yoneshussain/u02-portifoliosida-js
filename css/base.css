@@ -4,47 +4,29 @@
     --pink: #E70FAA;
     --gray: #525252;
     --menu-bg: #ffffff;
-    --menu-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    --menu-shadow: 0 12px 30px rgba(0, 0, 0, 0.288);
     --theme-btn: #2e2c2c;
+
 }
 
 :root.dark {
 
     --menu-bg: #191919;
-    --menu-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-
+    --menu-shadow: 0 12px 30px rgba(0, 0, 0, 0.769);
     --theme-btn: #ded7d7;
-
-    body {
-        background-color: #191919;
-    }
-
-    .navbar {
-        background-color: #191919;
-    }
-
-
     --black: #D9D9D9;
     --gray: #A7A7A7;
 
 
     .menu-top {
-        .hamburger {
-            filter: invert(100%);
-                }
-    }
-
-    .main-text {
-        text-shadow: none;
-    }
-
-    .portrait {
-        box-shadow: none;
+        .hamburger img {
+            filter: invert(50%);
+        }
     }
 
     .theme-toggle img {
-    filter: invert(80%);
-}
+        filter: invert(80%);
+    }
 }
 
 
@@ -91,6 +73,8 @@ body {
         "home-info"
         "footer";
     gap: 20px;
+    background-color: var(--menu-bg);
+    transition: background-color 400ms ease;
 }
 
 /* navigation bar */
@@ -100,9 +84,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--menu-bg);
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background-color 400ms ease;
 
 }
 
@@ -136,7 +122,7 @@ body {
         background-color: transparent;
         padding: 15px 20px;
         margin-top: 20px;
-
+        cursor: pointer;
     }
 
 
@@ -144,14 +130,7 @@ body {
     .hamburger img {
         height: 25px;
         width: 25px;
-        transition:
-            box-shadow 200ms ease-out;
-
-    }
-
-    .hamburger:hover img {
-        box-shadow: 0 2px 25px rgba(179, 179, 179, 0.267);
-        border-radius: 5px;
+        transition: filter 400ms ease;
     }
 
 }
@@ -166,7 +145,8 @@ body {
     top: 100%;
     left: 5%;
     right: 5%;
-    border: 1px solid rgb(218, 216, 216);
+    border: 1px solid rgba(218, 216, 216, 0.383);
+    transition: background-color 400ms ease, border 300ms ease;
 
 
     .menu-mid {
@@ -184,7 +164,7 @@ body {
             padding: 10px;
             border: 0.5px solid rgba(128, 128, 128, 0);
             border-radius: 14px;
-            transition: border, 300ms;
+            transition: border, 300ms ease;
         }
 
         .links:hover {
@@ -224,8 +204,9 @@ body {
     font-size: 2.5rem;
     font-family: Poppins;
     color: var(--black);
-    text-shadow: 0px 0px 90px #ccc;
+    text-shadow: var(--menu-shadow);
     line-height: 3rem;
+    transition: color 300ms ease;
 }
 
 .text-name {
@@ -244,7 +225,8 @@ body {
     background-image: linear-gradient(160deg, #13B0F5, #E70FAA);
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    box-shadow: 0px 0px 30px #a7a7a7;
+    box-shadow: var(--menu-shadow);
+    transition: box-shadow 300ms ease;
 }
 
 /* THEME BUTTON */
@@ -263,7 +245,7 @@ body {
     border-radius: 50px;
     box-shadow: var(--menu-shadow);
     opacity: 1;
-    transition: opacity 500ms ease, transform 500ms ease;
+    transition: opacity 500ms ease, transform 500ms ease, background-color 400ms ease, box-shadow 300ms ease;
     transform: rotate(0turn);
     cursor: pointer;
 }
@@ -282,6 +264,7 @@ body {
 
 .theme-toggle img {
     height: 40px;
+    transition: filter 400ms ease;
 }
 
 /* FOOTER */
@@ -361,10 +344,8 @@ body {
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
         padding-bottom: 20px;
-        background-color: var(--menu-bg);
-
-
         width: 90%;
+        transition: box-shadow 300ms ease;
     }
 
     .menu-panel {
@@ -375,7 +356,7 @@ body {
         margin-top: 25px;
         opacity: 1;
         transform: translateY(0);
-        transition: opacity 300ms ease, visibility 300ms, transform 300ms ease;
+        transition: opacity 300ms ease, visibility 300ms, transform 300ms ease, background-color 400ms ease, box-shadow 300ms ease;
 
         .links {
             padding: 10px;
@@ -399,13 +380,11 @@ body {
     .navbar {
         flex-direction: row;
         justify-content: space-between;
-        background-color: var(--menu-bg);
     }
 
     .menu-top {
         width: auto;
         margin-left: 40px;
-
     }
 
     .hamburger {
@@ -449,15 +428,15 @@ body {
 
 
 @media (prefers-reduced-motion: reduce) {
-    .menu-panel {
-        transition: none;
-    }
 
+    body,
+    .navbar,
+    .menu-top,
+    .menu-panel,
     .theme-toggle {
         transition: none;
     }
 }
-
 
 
 

@@ -1,0 +1,70 @@
+{
+  "workExperience": [
+    {
+      "id": "simplex-2026",
+      "title": "Traffic Controller / Flagperson",
+      "company": "Simplex Bemanning AB / Nässelgrundet AB",
+      "location": null,
+      "startDate": "2026-03-20",
+      "endDate": "2026-08-10",
+      "employmentType": null,
+      "description": "Directed and guided road users to maintain a safe traffic environment at roadworks. Worked long outdoor shifts in varying conditions, requiring attention, responsibility and clear communication with road users and colleagues."
+    },
+    {
+      "id": "filmstaden-2024",
+      "title": "Cinema Employee",
+      "company": "Filmstaden Scandinavia",
+      "location": "Solna",
+      "startDate": "2024-12-03",
+      "endDate": "2026-07-30",
+      "employmentType": null,
+      "description": "Handled checkout transactions, refunds, inventory, restocking and store logistics. Worked efficiently during busy shifts and collaborated with colleagues to provide good customer service."
+    },
+    {
+      "id": "grona-lund-2025",
+      "title": "Attractions Host",
+      "company": "Gröna Lunds Tivoli",
+      "location": "Stockholm",
+      "startDate": null,
+      "endDate": null,
+      "period": "Summer seasons 2025–2026 and Halloween 2025",
+      "employmentType": "Seasonal",
+      "description": "Responsible for ride safety and guest service, including welcoming children and families. Communicated clearly with visitors and worked closely with colleagues during long shifts in a busy environment."
+    },
+    {
+      "id": "max-2024",
+      "title": "Restaurant Crew Member",
+      "company": "MAX Burgers Barkarby",
+      "location": "Järfälla",
+      "startDate": "2024-01-01",
+      "endDate": "2025-02-03",
+      "employmentType": null,
+      "description": "Handled cash register duties and collaborated with colleagues to provide customer service during fast-paced, physically demanding shifts."
+    },
+    {
+      "id": "skyddsvarnet-2023",
+      "title": "Retail Assistant",
+      "company": "Second Hand Skyddsvärnet Spånga",
+      "location": "Stockholm",
+      "startDate": "2023-06-12",
+      "endDate": "2023-12-29",
+      "employmentType": null,
+      "description": "Worked in sales and storage, including cash handling, sorting clothing with colleagues and general retail tasks."
+    }
+  ],
+  "education": [
+    {
+        "id":"procivitas",
+        "title":""
+    }
+  ],
+  "skills": [
+    "Cash handling",
+    "Teamwork",
+    "Customer service",
+    "Communication",
+    "Attention to detail",
+    "Working under pressure",
+    "Comfortable with prolonged standing"
+  ]
+}

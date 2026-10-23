@@ -31,6 +31,17 @@ html {
     font-size: 62.5%;
 }
 
+:root.dark {
+    .tag .github {
+        filter: invert(100%);
+    }
+
+    .tag .greensock {
+        filter: invert(100%);
+
+    }
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr;
@@ -105,6 +116,7 @@ body {
         height: auto;
         min-height: 65px;
         padding: 10px;
+        transition: filter 400ms ease;
     }
 
 
