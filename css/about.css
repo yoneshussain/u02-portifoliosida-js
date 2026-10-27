@@ -1,3 +1,12 @@
+:root.dark {
+    .workexp-icon {
+        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(315%) contrast(100%);
+    }
+
+    .edu-icon {
+        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(315%) contrast(100%);
+    }
+}
 
 
 @font-face {
@@ -282,11 +291,7 @@ body {
     }
 }
 
-@media (max-width: 999px) {
-
-
-
-}
+@media (max-width: 999px) {}
 
 
 
@@ -381,15 +386,4 @@ body {
         grid-column: 1 / -1;
     }
 
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .workexp-icon {
-        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(315%) contrast(100%);
-    }
-
-    .edu-icon {
-        filter: invert(100%) sepia(10%) saturate(294%) hue-rotate(151deg) brightness(315%) contrast(100%);
-    }
 }

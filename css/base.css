@@ -89,6 +89,7 @@ body {
     top: 0;
     z-index: 100;
     transition: background-color 400ms ease;
+    height: 10rem;
 
 }
 
