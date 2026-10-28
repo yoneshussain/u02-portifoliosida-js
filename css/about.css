@@ -84,14 +84,20 @@ body {
         font-size: 1.2rem;
         color: var(--gray);
         font-family: DMSans;
+        padding-bottom: 20px;
     }
+    
+    .skills-text {
+        padding-bottom: 0px;
+    }
+
 }
 
 /* WORK EXPERIENCE */
 
 .workexp {
     grid-area: workexp;
-    margin: 30px 20px;
+    margin: 30px 20px 0px 20px;
 
     & .workexp-list {
         display: flex;
@@ -111,7 +117,7 @@ body {
         font-size: 1.7rem;
         font-family: Poppins;
         color: var(--black);
-        padding-bottom: 8px;
+        padding-bottom: 50px;
     }
 
     & .workexp-title {
@@ -121,6 +127,15 @@ body {
         color: var(--gray);
         padding-bottom: 10px;
         opacity: 0.9;
+    }
+
+    .workexp-desc {
+        font-family: DMSans;
+        line-break:anywhere;
+        padding: 0px 0px 10px 0px;
+        font-size: 1.2rem;
+        color: var(--gray);
+        font-weight: 300;
     }
 
     & .workexp-icon {
@@ -139,6 +154,7 @@ body {
         width: 32%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     & .tag-workexp {
@@ -194,7 +210,7 @@ body {
         font-size: 1.7rem;
         font-family: Poppins;
         color: var(--black);
-        padding-bottom: 4px;
+        padding-bottom: 23px;
     }
 
     & .edu-title {
@@ -204,6 +220,15 @@ body {
         color: var(--gray);
         padding-bottom: 10px;
         opacity: 0.9;
+    }
+
+        .edu-desc {
+        font-family: DMSans;
+        line-break:anywhere;
+        padding: 0px 0px 10px 0px;
+        font-size: 1.2rem;
+        color: var(--gray);
+        font-weight: 300;
     }
 
     & .edu-icon {
@@ -222,6 +247,7 @@ body {
         width: 32%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     & .tag-edu {
@@ -300,7 +326,6 @@ body {
     body {
         grid-template-columns: 125px 1fr 1fr 1.1fr 1fr;
         grid-template-rows: auto auto auto auto auto;
-        row-gap: 20px;
     }
 
     .navbar {
@@ -351,6 +376,7 @@ body {
 
         & .aboutme-text {
             font-size: 1.5rem;
+            padding-bottom: 5px;
         }
     }
 
@@ -362,6 +388,7 @@ body {
 
         & .workexp-heading {
             font-size: 2.7rem;
+            padding-bottom: 25px;
         }
 
         & .workexp-info {
@@ -381,6 +408,7 @@ body {
 
         & .edu-heading {
             font-size: 2.7rem;
+            padding-bottom: 5px;
         }
 
         & .edu-info {

@@ -52,6 +52,16 @@
     }
   ],
   "education": [
+        {
+      "id": "chas",
+      "title": "Fullstack JavaScript Developer | Higher Vocational Education",
+      "school": "Chas Academy",
+      "location": "Stockholm",
+      "startDate": "August 2026",
+      "endDate": "August 2028",
+      "educationType": "Full-time",
+      "description": "Focus on frontend and backend development, modern web technologies, responsive design, and building interactive, user-friendly web applications."
+    },
     {
       "id": "procivitas",
       "title": "High School Degree",
