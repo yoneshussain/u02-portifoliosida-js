@@ -299,7 +299,7 @@ body {
 
     body {
         grid-template-columns: 125px 1fr 1fr 1.1fr 1fr;
-        grid-template-rows: 100px 150px auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         row-gap: 20px;
     }
 
@@ -338,9 +338,15 @@ body {
     .aboutme {
         grid-column: 2 / 5;
         margin: 0;
+        padding: 25px 0 0 0;
+
 
         & .aboutme-h {
             font-size: 2.7rem;
+        }
+
+        & .skills-h {
+            padding-top: 10px;
         }
 
         & .aboutme-text {
@@ -352,6 +358,7 @@ body {
         grid-column: 2/5;
 
         margin: 0;
+        padding-top: 20px;
 
         & .workexp-heading {
             font-size: 2.7rem;
@@ -369,6 +376,8 @@ body {
         grid-column: 2/5;
 
         margin: 0;
+        padding-top: 20px;
+
 
         & .edu-heading {
             font-size: 2.7rem;
@@ -384,6 +393,7 @@ body {
 
     .footer {
         grid-column: 1 / -1;
+        padding-top: 30px;
     }
 
 }
