@@ -86,9 +86,15 @@ body {
         font-family: DMSans;
         padding-bottom: 20px;
     }
-    
+
     .skills-text {
         padding-bottom: 0px;
+    }
+
+    .skill-list {
+
+        list-style-type: disc;
+        margin-left: 1.4rem;
     }
 
 }
@@ -131,7 +137,6 @@ body {
 
     .workexp-desc {
         font-family: DMSans;
-        line-break:anywhere;
         padding: 0px 0px 10px 0px;
         font-size: 1.2rem;
         color: var(--gray);
@@ -222,9 +227,9 @@ body {
         opacity: 0.9;
     }
 
-        .edu-desc {
+    .edu-desc {
         font-family: DMSans;
-        line-break:anywhere;
+        line-break: anywhere;
         padding: 0px 0px 10px 0px;
         font-size: 1.2rem;
         color: var(--gray);
