@@ -1,21 +1,12 @@
-@font-face {
-    font-family: FiraCode;
-    src: url(../assets/FiraCode-VariableFont_wght.ttf);
-}
+:root.dark {
+    .tag .github {
+        filter: invert(100%);
+    }
 
-@font-face {
-    font-family: DMSans;
-    src: url(../assets/DMSans-VariableFont_opsz\,wght.ttf);
-}
+    .tag .greensock {
+        filter: invert(100%);
 
-@font-face {
-    font-family: Poppins;
-    src: url(../assets/Poppins-Bold.ttf);
-}
-
-@font-face {
-    font-family: Poppins-light;
-    src: url(../assets/Poppins-Light.ttf);
+    }
 }
 
 * {
@@ -31,16 +22,6 @@ html {
     font-size: 62.5%;
 }
 
-:root.dark {
-    .tag .github {
-        filter: invert(100%);
-    }
-
-    .tag .greensock {
-        filter: invert(100%);
-
-    }
-}
 
 body {
     display: grid;
@@ -78,7 +59,7 @@ body {
     .subtitle {
         font-size: 1.3rem;
         margin-bottom: 25px;
-        font-family: DMSans;
+        font-family: "DM Sans", sans-serif;
         font-weight: 500;
         color: var(--gray);
         padding-left: 5px;
@@ -123,7 +104,7 @@ body {
     .tools-title {
         font-size: 2.4rem;
         padding-bottom: 20px;
-        font-family: DMSans;
+        font-family: "DM Sans", sans-serif;
         font-weight: 800;
         color: var(--black);
         padding-left: 5px;
@@ -145,7 +126,7 @@ body {
         width: 90%;
         font-size: 1.3rem;
         border-radius: 14px;
-        font-family: DMSans;
+        font-family: "DM Sans", sans-serif;
         font-weight: 600;
         color: var(--black);
         border: 1px solid rgba(80, 80, 80, 0.459);
@@ -180,7 +161,7 @@ body {
     justify-content: center;
     margin-top: auto;
     font-size: 1.1rem;
-    font-family: DMSans;
+    font-family: "DM Sans", sans-serif;
     padding-top: 80px;
     padding-bottom: 23px;
     color: var(--gray);

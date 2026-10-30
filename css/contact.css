@@ -1,25 +1,5 @@
 
 
-@font-face {
-    font-family: FiraCode;
-    src: url(../assets/FiraCode-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: DMSans;
-    src: url(../assets/DMSans-VariableFont_opsz\,wght.ttf);
-}
-
-@font-face {
-    font-family: Poppins;
-    src: url(../assets/Poppins-Bold.ttf);
-}
-
-@font-face {
-    font-family: Poppins-light;
-    src: url(../assets/Poppins-Light.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -62,7 +42,7 @@ body {
 
     .text {
         font-size: 2rem;
-        font-family: DMsans;
+        font-family: "DM Sans", sans-serif;
         color: var(--black);
         line-height: 3rem;
     }
@@ -83,7 +63,7 @@ body {
     justify-content: center;
     margin-top: auto;
     font-size: 1.1rem;
-    font-family: DMSans;
+    font-family: "DM Sans", sans-serif;
     padding-bottom: 23px;
     color: var(--gray);
     opacity: 0.8;
