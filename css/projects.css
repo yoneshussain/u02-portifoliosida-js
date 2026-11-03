@@ -123,6 +123,11 @@ body {
         color: var(--black);
         font-family: "DM Sans", sans-serif;
     }
+
+    .no-projects {
+        text-align: center;
+        margin-bottom: 40%;
+    }
 }
 
 /* FOOTER */
@@ -203,6 +208,11 @@ body {
         .title {
             margin-top: 50px;
             margin-left: 95px;
+        }
+
+        .no-projects {
+            margin-left: 50px;
+            margin-right: 50px;
         }
 
         .subtitle {

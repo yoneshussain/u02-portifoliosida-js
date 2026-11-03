@@ -1,7 +1,10 @@
 const API_URL = "https://api.github.com/users/yoneshussain/repos";
+const projectsList = document.querySelector(".projects");
+const projectsSection = document.querySelector(".projects-section");
+
 async function getProjects() {
   const response = await fetch(API_URL);
-  let status = response.status;
+  const status = response.status;
 
   if (!response.ok) {
     throw new Error(`Failed to load projects from GitHub: ${status}`);
@@ -28,67 +31,104 @@ function createElement(tag, className, text = "") {
 }
 
 async function initProjects() {
-  const projects = await getProjects();
-  console.log(projects);
-  const projectsList = document.querySelector(".projects");
-  let i = 1;
+  const loading = createElement(
+    "p",
+    "no-projects title",
+    "Loading projects...",
+  );
+  projectsSection.appendChild(loading);
+  try {
+    const projects = await getProjects();
+    console.log(projects);
 
-  for (const project of projects) {
-    const projectName = project.name;
-    let projectDesc = project.description;
-    const projectLangs = project.language;
-    let projectPreview = project.homepage;
-    let projectCode = project.html_url;
-
-    if (projectDesc === null) {
-      projectDesc = "This project has no description.";
+    if (projects.length === 0) {
+      const noProjects = createElement(
+        "p",
+        "no-projects title",
+        "No projects available",
+      );
+      projectsSection.appendChild(noProjects);
     }
 
-    const htmlContainer = createElement("div", "project");
-    const projectImg = createElement("img", "project-image");
-    const projectTitle = createElement("p", "project-title", projectName);
-    const projectDescription = createElement("p", "project-desc", projectDesc);
-    const projectTs = createElement("p", "project-ts");
-    const strongTs = createElement("strong", "", "Main language:");
-    const languages = document.createTextNode(` ${projectLangs}`);
-    const projectLinks = createElement("div", "project-links");
-    const livePreview = createElement("a", "link-text");
-    const previewText = document.createTextNode("Live Preview");
-    const viewCode = createElement("a", "link-text");
-    const viewText = document.createTextNode("View Code");
-    const chainImg = createElement("img", "chain-img link-img");
-    const githubLogo = createElement("img", "link-img");
+    let i = 1;
 
-    projectsList.appendChild(htmlContainer);
-    htmlContainer.appendChild(projectImg);
-    htmlContainer.appendChild(projectTitle);
-    htmlContainer.appendChild(projectDescription);
-    htmlContainer.appendChild(projectTs);
-    projectTs.append(strongTs, languages);
-    htmlContainer.appendChild(projectLinks);
-    projectLinks.appendChild(livePreview);
-    projectLinks.appendChild(viewCode);
-    livePreview.append(chainImg, previewText);
-    viewCode.append(githubLogo, viewText);
+    for (const project of projects) {
+      const projectName = project.name;
+      let projectDesc = project.description;
+      const projectLangs = project.language ?? "Not specified";
+      let projectPreview = project.homepage;
+      let projectCode = project.html_url;
 
-    if (projectPreview === null) {
-      projectPreview = "#";
-      previewText.textContent = "No Preview";
+      if (projectDesc === null) {
+        projectDesc = "This project has no description.";
+      }
+
+      const htmlContainer = createElement("div", "project");
+      const projectImg = createElement("img", "project-image");
+      const projectTitle = createElement("p", "project-title", projectName);
+      const projectDescription = createElement(
+        "p",
+        "project-desc",
+        projectDesc,
+      );
+      const projectTs = createElement("p", "project-ts");
+      const strongTs = createElement("strong", "", "Main language:");
+      const languages = document.createTextNode(` ${projectLangs}`);
+      const projectLinks = createElement("div", "project-links");
+      const livePreview = createElement("a", "link-text");
+      const previewText = document.createTextNode("Live Preview");
+      const viewCode = createElement("a", "link-text");
+      const viewText = document.createTextNode("View Code");
+      const chainImg = createElement("img", "chain-img link-img");
+      const githubLogo = createElement("img", "link-img");
+
+      projectsList.appendChild(htmlContainer);
+      htmlContainer.appendChild(projectImg);
+      htmlContainer.appendChild(projectTitle);
+      htmlContainer.appendChild(projectDescription);
+      htmlContainer.appendChild(projectTs);
+      projectTs.append(strongTs, languages);
+      htmlContainer.appendChild(projectLinks);
+      projectLinks.appendChild(livePreview);
+      projectLinks.appendChild(viewCode);
+      livePreview.append(chainImg, previewText);
+      viewCode.append(githubLogo, viewText);
+
+      if (projectPreview === null || projectPreview === "") {
+        projectPreview = "#";
+        previewText.textContent = "No Preview";
+      }
+
+      projectImg.src = `../assets/project${i}.jpg`;
+      projectImg.alt = "";
+      chainImg.src = "../assets/chain.svg";
+      chainImg.alt = "";
+      githubLogo.src = "../assets/githubicon.png";
+      githubLogo.alt = "github logotype";
+      livePreview.href = projectPreview;
+      livePreview.target = "_blank";
+      livePreview.rel = "noopener noreferrer";
+      viewCode.href = projectCode;
+
+      i++;
+      if (i === 7) {
+        i = 1;
+      }
     }
+  } catch (err) {
+    console.error("Project loading failed:", err);
 
-    projectImg.src = `../assets/project${i}.jpg`;
-    projectImg.alt = "placeholder image for the project";
-    chainImg.src = "../assets/chain.svg";
-    chainImg.alt = "chain/link image";
-    githubLogo.src = "../assets/githubicon.png";
-    githubLogo.alt = "github logotype";
-    livePreview.href = projectPreview;
-    viewCode.href = projectCode;
+    const errorMessage = createElement(
+      "p",
+      "no-projects title",
+      "Could not load projects. Please try again later.",
+    );
 
-    i++;
-    if (i == 7) {
-      i = 1;
-    }
+    errorMessage.setAttribute("role", "alert");
+
+    projectsSection.appendChild(errorMessage);
+  } finally {
+    loading.remove();
   }
 }
 initProjects();
