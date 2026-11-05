@@ -29,12 +29,11 @@ function resetTimer() {
 
   inactivityTimer = setTimeout(() => {
     themeToggle.classList.add("theme-toggle-inactive");
-    console.log("Timer reset");
   }, 1000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  applyTheme()
+  applyTheme();
   resetTimer();
 });
 
@@ -58,6 +57,5 @@ themeToggle.addEventListener("click", () => {
     theme = "light";
     saveTheme();
   }
-  console.log(theme);
   applyTheme();
 });

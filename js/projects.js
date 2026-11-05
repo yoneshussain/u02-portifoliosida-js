@@ -12,6 +12,10 @@ async function getProjects() {
 
   const projects = await response.json();
 
+  if (!Array.isArray(projects)) {
+    throw new Error("Invalid GitHub response");
+  }
+
   return projects;
 }
 
@@ -63,9 +67,9 @@ async function initProjects() {
         projectDesc = "This project has no description.";
       }
 
-      const htmlContainer = createElement("div", "project");
+      const htmlContainer = createElement("li", "project");
       const projectImg = createElement("img", "project-image");
-      const projectTitle = createElement("p", "project-title", projectName);
+      const projectTitle = createElement("h2", "project-title", projectName);
       const projectDescription = createElement(
         "p",
         "project-desc",
@@ -94,9 +98,11 @@ async function initProjects() {
       livePreview.append(chainImg, previewText);
       viewCode.append(githubLogo, viewText);
 
-      if (projectPreview === null || projectPreview === "") {
-        projectPreview = "#";
-        previewText.textContent = "No Preview";
+
+      if (!projectPreview) {
+        livePreview.remove();
+      } else {
+        livePreview.href = projectPreview;
       }
 
       projectImg.src = `../assets/project${i}.jpg`;
@@ -108,6 +114,8 @@ async function initProjects() {
       livePreview.href = projectPreview;
       livePreview.target = "_blank";
       livePreview.rel = "noopener noreferrer";
+      viewCode.target = "_blank";
+      viewCode.rel = "noopener noreferrer";
       viewCode.href = projectCode;
 
       i++;

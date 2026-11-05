@@ -10,6 +10,8 @@
         document.documentElement.classList.add("dark");
       }
     </script>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/theme.js" defer></script>
     <link rel="stylesheet" href="./css/base.css" />
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="././assets/logo-icon.ico" />
@@ -38,7 +40,7 @@
       </div>
 
       <div class="menu-panel menu-hidden">
-        <nav class="menu-mid">
+        <nav class="menu-mid" id="primary-navigation">
           <a href="./index.html" class="links">Home </a>
           <a href="./pages/about.html" class="links">About</a>
 
@@ -84,12 +86,12 @@
     </header>
 
     <main class="home-info">
-      <h1 class="home-text">
+      <div class="home-text">
         <p class="main-text">Hi👋,</p>
         <p class="main-text">My name is</p>
         <p class="main-text text-name">Yones</p>
         <p class="main-text">I build things for web</p>
-      </h1>
+      </div>
 
       <img
         src="./assets/yones-portrait.jpeg"
@@ -113,7 +115,4 @@
       </p>
     </footer>
   </body>
-
-  <script src="./js/menu.js"></script>
-  <script src="./js/theme.js"></script>
 </html>

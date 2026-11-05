@@ -68,7 +68,7 @@ function createCVEntry(entry, type) {
   const item = createElement("li", `${type}-container`);
 
   const left = createElement("div", `${type}-left`);
-  const heading = createElement("h2", `${type}-title`, title);
+  const heading = createElement("h3", `${type}-title`, title);
   const descriptionElement = createElement("p", `${type}-desc`, description);
   const info = createElement("div", `${type}-info`);
 

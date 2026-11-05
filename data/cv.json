@@ -52,7 +52,7 @@
     }
   ],
   "education": [
-        {
+    {
       "id": "chas",
       "title": "Fullstack JavaScript Developer | Higher Vocational Education",
       "school": "Chas Academy",
@@ -71,6 +71,16 @@
       "endDate": "Summer 2025",
       "educationType": "Full-time",
       "description": "Orientation: Economy-juridics | Learned a mix of how economy works in a country and companies aswell as Swedens law system."
+    },
+    {
+      "id": "school",
+      "title": "School Degree",
+      "school": "Internationella Engelska Skolan",
+      "location": "Stockholm",
+      "startDate": "Summer 2016",
+      "endDate": "Summer 2021",
+      "educationType": "Full-time",
+      "description": "A school focused and mixed swedish and english merits."
     }
   ],
   "skills": [

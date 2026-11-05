@@ -162,7 +162,7 @@ body {
             padding: 10px;
             border: 0.5px solid rgba(128, 128, 128, 0);
             border-radius: 14px;
-            transition: border, 300ms ease;
+            transition: border 300ms ease;
         }
 
         .links:hover {
@@ -213,7 +213,9 @@ body {
     text-shadow: var(--menu-shadow);
     line-height: 3rem;
     transition: color 300ms ease;
+    font-weight: 600;
 }
+
 
 .text-name {
     background-image: linear-gradient(179deg, var(--blue), var(--pink));
@@ -305,6 +307,8 @@ body {
     .navbar {
         flex-direction: row;
         justify-content: space-between;
+        grid-column: 1/-1;
+
     }
 
     .menu-top {
@@ -359,6 +363,10 @@ body {
 
     .portrait {
         max-width: 30rem;
+    }
+
+    .footer {
+        grid-column: 1 / -1;
     }
 }
 
