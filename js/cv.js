@@ -62,7 +62,7 @@ function createCVEntry(entry, type) {
 
   const title = entry.title ?? "Untitled";
   const description = entry.description ?? "";
-  const org = isWork ? entry.company : entry.school;
+  const organization = isWork ? entry.company : entry.school;
   const category = isWork ? entry.employmentType : entry.educationType;
 
   const item = createElement("li", `${type}-container`);
@@ -74,7 +74,7 @@ function createCVEntry(entry, type) {
 
   const orgElement = createIconText(
     "../assets/company-icon.svg",
-    org,
+    organization,
     "icon-text",
     isWork ? "workexp-icon workexp1-comp" : "edu-icon edu-comp",
   );
@@ -137,7 +137,7 @@ async function initCV() {
     renderEntries(cv.workExperience, workList, "workexp");
     renderEntries(cv.education, educationList, "edu");
   } catch (error) {
-    console.log("CV failed", error);
+    console.error("CV failed", error);
 
     showError("CV could not be loaded");
   }

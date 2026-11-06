@@ -7,12 +7,7 @@ button.addEventListener("click", () => {
     const isHidden = menuPanel.classList.toggle("menu-hidden")
 
 
-    if (!isHidden) {
-        button.setAttribute("aria-expanded", true)
-    } else {
-        button.setAttribute("aria-expanded", false)
-
-    }
+    button.setAttribute("aria-expanded", String(!isHidden))
 
 })
 

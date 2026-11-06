@@ -19,11 +19,59 @@ async function getProjects() {
   return projects;
 }
 
-// async function getProjects() {
-//   const projects = localStorage.getItem("projects");
+function createProjectCard(project, imageNumber) {
+  const projectName = project.name;
+  let projectDesc = project.description || "This project has no description.";
+  const projectLanguage = project.language ?? "Not specified";
+  let projectPreview = project.homepage;
+  const projectCode = project.html_url;
 
-//   return JSON.parse(projects);
-// }
+  const projectCard = createElement("li", "project");
+  const projectImg = createElement("img", "project-image");
+  const projectTitle = createElement("h2", "project-title", projectName);
+  const projectDescription = createElement("p", "project-desc", projectDesc);
+  const languageInfo = createElement("p", "project-ts");
+  const languageLabel = createElement("strong", "", "Main language:");
+  const languages = document.createTextNode(` ${projectLanguage}`);
+  const projectLinks = createElement("div", "project-links");
+  const livePreview = createElement("a", "link-text");
+  const previewText = document.createTextNode("Live Preview");
+  const viewCode = createElement("a", "link-text");
+  const viewText = document.createTextNode("View Code");
+  const chainImg = createElement("img", "chain-img link-img");
+  const githubLogo = createElement("img", "link-img");
+
+  if (!projectPreview) {
+    livePreview.remove();
+  } else {
+    livePreview.href = projectPreview;
+    projectLinks.appendChild(livePreview);
+  }
+
+  projectImg.src = `../assets/project${imageNumber}.jpg`;
+  projectImg.alt = "";
+  chainImg.src = "../assets/chain.svg";
+  chainImg.alt = "";
+  githubLogo.src = "../assets/githubicon.png";
+  githubLogo.alt = "github logotype";
+  livePreview.target = "_blank";
+  livePreview.rel = "noopener noreferrer";
+  viewCode.target = "_blank";
+  viewCode.rel = "noopener noreferrer";
+  viewCode.href = projectCode;
+
+  projectCard.appendChild(projectImg);
+  projectCard.appendChild(projectTitle);
+  projectCard.appendChild(projectDescription);
+  projectCard.appendChild(languageInfo);
+  languageInfo.append(languageLabel, languages);
+  projectCard.appendChild(projectLinks);
+  projectLinks.appendChild(viewCode);
+  livePreview.append(chainImg, previewText);
+  viewCode.append(githubLogo, viewText);
+
+  return projectCard;
+}
 
 function createElement(tag, className, text = "") {
   const element = document.createElement(tag);
@@ -54,73 +102,16 @@ async function initProjects() {
       projectsSection.appendChild(noProjects);
     }
 
-    let i = 1;
+    let imageNumber = 1;
 
     for (const project of projects) {
-      const projectName = project.name;
-      let projectDesc = project.description;
-      const projectLangs = project.language ?? "Not specified";
-      let projectPreview = project.homepage;
-      let projectCode = project.html_url;
+      const card = createProjectCard(project, imageNumber);
 
-      if (projectDesc === null) {
-        projectDesc = "This project has no description.";
-      }
+      projectsList.appendChild(card);
 
-      const htmlContainer = createElement("li", "project");
-      const projectImg = createElement("img", "project-image");
-      const projectTitle = createElement("h2", "project-title", projectName);
-      const projectDescription = createElement(
-        "p",
-        "project-desc",
-        projectDesc,
-      );
-      const projectTs = createElement("p", "project-ts");
-      const strongTs = createElement("strong", "", "Main language:");
-      const languages = document.createTextNode(` ${projectLangs}`);
-      const projectLinks = createElement("div", "project-links");
-      const livePreview = createElement("a", "link-text");
-      const previewText = document.createTextNode("Live Preview");
-      const viewCode = createElement("a", "link-text");
-      const viewText = document.createTextNode("View Code");
-      const chainImg = createElement("img", "chain-img link-img");
-      const githubLogo = createElement("img", "link-img");
-
-      projectsList.appendChild(htmlContainer);
-      htmlContainer.appendChild(projectImg);
-      htmlContainer.appendChild(projectTitle);
-      htmlContainer.appendChild(projectDescription);
-      htmlContainer.appendChild(projectTs);
-      projectTs.append(strongTs, languages);
-      htmlContainer.appendChild(projectLinks);
-      projectLinks.appendChild(livePreview);
-      projectLinks.appendChild(viewCode);
-      livePreview.append(chainImg, previewText);
-      viewCode.append(githubLogo, viewText);
-
-
-      if (!projectPreview) {
-        livePreview.remove();
-      } else {
-        livePreview.href = projectPreview;
-      }
-
-      projectImg.src = `../assets/project${i}.jpg`;
-      projectImg.alt = "";
-      chainImg.src = "../assets/chain.svg";
-      chainImg.alt = "";
-      githubLogo.src = "../assets/githubicon.png";
-      githubLogo.alt = "github logotype";
-      livePreview.href = projectPreview;
-      livePreview.target = "_blank";
-      livePreview.rel = "noopener noreferrer";
-      viewCode.target = "_blank";
-      viewCode.rel = "noopener noreferrer";
-      viewCode.href = projectCode;
-
-      i++;
-      if (i === 7) {
-        i = 1;
+      imageNumber++;
+      if (imageNumber > 6) {
+        imageNumber = 1;
       }
     }
   } catch (err) {

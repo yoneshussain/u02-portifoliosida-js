@@ -14,6 +14,11 @@ function loadTheme() {
 
 function applyTheme() {
   document.documentElement.classList.toggle("dark", theme === "dark");
+
+  themeToggle.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
+  );
 }
 
 function saveTheme() {
@@ -50,12 +55,8 @@ document.addEventListener("click", () => {
 });
 
 themeToggle.addEventListener("click", () => {
-  if (theme === "light") {
-    theme = "dark";
-    saveTheme();
-  } else if (theme === "dark") {
-    theme = "light";
-    saveTheme();
-  }
+  theme = theme === "light" ? "dark" : "light";
+
+  saveTheme();
   applyTheme();
 });
