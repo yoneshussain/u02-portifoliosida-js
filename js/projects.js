@@ -2,6 +2,15 @@ const API_URL = "https://api.github.com/users/yoneshussain/repos";
 const projectsList = document.querySelector(".projects");
 const projectsSection = document.querySelector(".projects-section");
 
+function createElement(tag, className, text = "") {
+  const element = document.createElement(tag);
+
+  element.className = className;
+  element.textContent = text;
+
+  return element;
+}
+
 async function getProjects() {
   const response = await fetch(API_URL);
   const status = response.status;
@@ -21,9 +30,9 @@ async function getProjects() {
 
 function createProjectCard(project, imageNumber) {
   const projectName = project.name;
-  let projectDesc = project.description || "This project has no description.";
+  const projectDesc = project.description || "This project has no description.";
   const projectLanguage = project.language ?? "Not specified";
-  let projectPreview = project.homepage;
+  const projectPreview = project.homepage;
   const projectCode = project.html_url;
 
   const projectCard = createElement("li", "project");
@@ -41,9 +50,7 @@ function createProjectCard(project, imageNumber) {
   const chainImg = createElement("img", "chain-img link-img");
   const githubLogo = createElement("img", "link-img");
 
-  if (!projectPreview) {
-    livePreview.remove();
-  } else {
+  if (projectPreview) {
     livePreview.href = projectPreview;
     projectLinks.appendChild(livePreview);
   }
@@ -53,7 +60,7 @@ function createProjectCard(project, imageNumber) {
   chainImg.src = "../assets/chain.svg";
   chainImg.alt = "";
   githubLogo.src = "../assets/githubicon.png";
-  githubLogo.alt = "github logotype";
+  githubLogo.alt = "";
   livePreview.target = "_blank";
   livePreview.rel = "noopener noreferrer";
   viewCode.target = "_blank";
@@ -73,13 +80,20 @@ function createProjectCard(project, imageNumber) {
   return projectCard;
 }
 
-function createElement(tag, className, text = "") {
-  const element = document.createElement(tag);
+function renderProjects(projects) {
+  let imageNumber = 1;
 
-  element.className = className;
-  element.textContent = text;
+  for (const project of projects) {
+    const card = createProjectCard(project, imageNumber);
 
-  return element;
+    projectsList.appendChild(card);
+
+    imageNumber++;
+
+    if (imageNumber > 6) {
+      imageNumber = 1;
+    }
+  }
 }
 
 async function initProjects() {
@@ -89,6 +103,7 @@ async function initProjects() {
     "Loading projects...",
   );
   projectsSection.appendChild(loading);
+
   try {
     const projects = await getProjects();
     console.log(projects);
@@ -102,18 +117,7 @@ async function initProjects() {
       projectsSection.appendChild(noProjects);
     }
 
-    let imageNumber = 1;
-
-    for (const project of projects) {
-      const card = createProjectCard(project, imageNumber);
-
-      projectsList.appendChild(card);
-
-      imageNumber++;
-      if (imageNumber > 6) {
-        imageNumber = 1;
-      }
-    }
+    renderProjects(projects);
   } catch (err) {
     console.error("Project loading failed:", err);
 
@@ -130,4 +134,5 @@ async function initProjects() {
     loading.remove();
   }
 }
+
 initProjects();
