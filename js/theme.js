@@ -34,7 +34,7 @@ function resetTimer() {
 
   inactivityTimer = setTimeout(() => {
     themeToggle.classList.add("theme-toggle-inactive");
-  }, 3000);
+  }, 1000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
