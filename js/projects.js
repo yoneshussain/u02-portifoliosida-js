@@ -102,6 +102,7 @@ async function loadProjects() {
     "no-projects title",
     "Loading projects...",
   );
+  loading.setAttribute("role", "status");
   projectsSection.appendChild(loading);
 
   try {

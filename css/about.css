@@ -17,9 +17,7 @@
 body {
     grid-template-areas:
         "navbar"
-        "aboutme"
-        "workexp"
-        "edu"
+        "main"
         "footer";
 }
 
@@ -27,20 +25,22 @@ body {
 /* PAGE CONTENT */
 /* ABOUT ME */
 
+.container {
+    grid-area: main;
+}
+
 .aboutme {
-    grid-area: aboutme;
-    display: flex;
+
     flex-direction: column;
     margin: 0px 20px;
-    justify-content: center;
-    padding-top: 50px;
-    height: 100%;
+    padding-top: 40px;
     gap: 11px;
 
     .aboutme-h {
         font-family: Poppins;
         font-size: 1.7rem;
         color: var(--black);
+        padding-bottom: 10px;
     }
 
     .aboutme-text {
@@ -65,7 +65,6 @@ body {
 /* WORK EXPERIENCE */
 
 .workexp {
-    grid-area: workexp;
     margin: 30px 20px 0px 20px;
 
     .workexp-list {
@@ -86,7 +85,6 @@ body {
         font-size: 1.7rem;
         font-family: Poppins;
         color: var(--black);
-        padding-bottom: 50px;
     }
 
     .workexp-title {
@@ -150,7 +148,6 @@ body {
 /* EDUCATION */
 
 .edu {
-    grid-area: edu;
     margin: 0px 20px;
 
     .edu-list {
@@ -178,7 +175,7 @@ body {
         font-size: 1.7rem;
         font-family: Poppins;
         color: var(--black);
-        padding-bottom: 40px;
+        padding-top: 35px;
     }
 
     .edu-title {
@@ -240,6 +237,10 @@ body {
 
 }
 
+footer {
+    padding-top: 50px;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -247,13 +248,15 @@ body {
 @media (min-width: 1000px) {
 
     body {
-        grid-template-columns: 125px 1fr 1fr 1.1fr 1fr;
+        grid-template-columns: 125px 5fr 1fr;
         grid-template-rows: auto auto auto auto auto;
     }
 
+    .container {
+        grid-column: 2/3;
+    }
 
     .aboutme {
-        grid-column: 2 / 5;
         margin: 0;
         padding: 25px 0 0 0;
 
@@ -273,14 +276,11 @@ body {
     }
 
     .workexp {
-        grid-column: 2/5;
-
         margin: 0;
         padding-top: 20px;
 
         .workexp-heading {
             font-size: 2.7rem;
-            padding-bottom: 25px;
         }
 
         .workexp-info {
@@ -292,15 +292,12 @@ body {
     }
 
     .edu {
-        grid-column: 2/5;
-
         margin: 0;
-        padding-top: 20px;
+        padding-top: 10px;
 
 
         .edu-heading {
             font-size: 2.7rem;
-            padding-bottom: 15px;
         }
 
         .edu-info {
