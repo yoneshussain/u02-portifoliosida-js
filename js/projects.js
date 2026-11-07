@@ -96,7 +96,7 @@ function renderProjects(projects) {
   }
 }
 
-async function initProjects() {
+async function loadProjects() {
   const loading = createElement(
     "p",
     "no-projects title",
@@ -135,4 +135,4 @@ async function initProjects() {
   }
 }
 
-initProjects();
+loadProjects();
